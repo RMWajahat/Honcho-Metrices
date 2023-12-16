@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="honchometrices.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Honcho Metrices</title>
+</head>
+
+<body onload="loading()">
+    <div id="cursorcustom"></div>
+
+    <div id="startupanimation">
+        <div id="honchoload">
+            <img class="logoimg" src="../assets/Honcho_logo.png" alt="">
+            <span class="animationspan" style="--displace:30; --delayto:0.2;">O</span>
+            <span class="animationspan" style="--displace:43; --delayto:0.4;">N</span>
+            <span class="animationspan" style="--displace:57; --delayto:0.6;">C</span>
+            <span class="animationspan" style="--displace:70; --delayto:0.8;">H</span>
+            <span class="animationspan" style="--displace:85; --delayto:1;">O</span>
+            </div>
+    </div>
+
+    <div id="menupage">
+        <div class="menuleft">
+            <i id="exitmenu" class="fa-solid fa-x"></i>
+            <div class="links">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg></a>
+            </div>
+        </div>
+
+
+        <div class="menumain">
+                <h1>DESIGN  <span>UI/UX</span><br><span>ADVER</span><b>TISING</b></h1>
+                <ul>
+                    <li><small>01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small> <a href="#">HOME</a></li>
+                    <li><small>02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small> <a href="#">ABOUT US</a></li>
+                    <li><small>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small> <a href="#">SERVICES</a></li>
+                    <li><small>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small> <a href="#">PROJECTS</a></li>
+                    <li><small>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small> <a href="#">CAREER</a></li>
+                </ul>
+        </div>
+
+
+        <div class="menuright">
+            <button id="cbtn"  class="contact contactbtn contactpopup">CONTACT US</button>
+        </div>
+    </div>
+
+        <!-- contact pop up -->
+
+
+    <div id="contactpoup">
+        <div class="menuleft">
+            <button class="contactpopmenu menubtn" style="cursor: pointer;">MENU</button>
+            <div class="links">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg></a>
+            </div>
+        </div>
+
+
+        <div class="menumain">
+                <h1>CONTACT <span>US</span><br><span>START</span><b>PROJECT</b></h1>
+                <div class="popcontact">
+                    <h2>Call Us</h2>
+                    <div class="numberstocontact">
+                        <a href="#">+92 333 4444444</a>
+                        <a href="#">+92 323 9999999</a>
+                    </div>
+                    <form id="contactform">
+                    <h2>Or Leave a Request</h2>
+                    <div class="formbase">
+                        <div class="formleft">
+                            <div class="skill dev">
+                                <h3>Web & App Development</h3>
+                                <div class="choices">
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        E-Commerce
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Health Care
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        UI/UX Design
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Corporate Website
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Landing Page
+                                    </small>
+                                </div>
+                            </div>
+                            <div class=" skill branding">
+                                <h3>Branding</h3>
+                                <div class="choices">
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Logo Design
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Advertising Design
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Corporate Design
+                                    </small>
+                                </div>
+                            </div>
+                            <div class=" skill seo">
+                                <h3>Web & App Development</h3>
+                                <div class="choices">
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        E-mail
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Social Media Marketing
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Search Engine Optimization
+                                    </small>
+                                    <small>
+                                        <input type="checkbox" name="" id="">
+                                        Link Building
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formright">
+                                <input type="text" placeholder="Name*">
+                                <input type="text" placeholder="Mobile Number*">
+                                <input type="email" placeholder="Email*">
+                                <textarea name="" id="" placeholder="How can we help you?"></textarea>
+                                <input type="submit" class="submit" value="Send">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                
+        </div>
+
+
+        <div class="menuright">
+            <i id="exitcontact" class="fa-solid fa-x"></i>
+        </div>
+    </div>
+
+    <!-- hero section  -->
+   <main class="herosec">
+
+        <div class="left">
+            <div class="logo">
+                <a href="index.html"><img id="honchologomain" src="../assets/Honcho_logo.png" alt="logo"></a>
+            </div>
+            <button class="menubtn">MENU</button>
+            <div class="links">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg></a>
+            </div>
+        </div>
+        <div id="slides">
+
+            <div class="center" id="herobar">
+                <div class="bars" style="--rty:-90; --tlz:60;" data-update="10"></div>
+                <div class="bars" style="--rty:90; --tlz:-60;" data-update="40"></div>
+                <div class="bars" style="--rty:-90; --tlz:60;" data-update="20">
+                    <h1 class="heading">We Make <span>Digital</span><br>Beautiful<h1>
+                            <a href="#" class="learn">Learn More</a>
+                </div>
+                <div class="bars" style="--rty:90; --tlz:-60;" data-update="90"></div>
+                <div class="bars" style="--rty:-90; --tlz:60;" data-update="50"></div>
+            </div>
+
+            <div class="center clientCol" >
+                <h1 id="ourclients" >
+                    <span>Our</span> Clients
+                </h1>
+                <div class="companyblock" id="ourallclients_slide">
+                    <div class="companyrow companyrow1" style="--moverow:-80;">
+                        <img  src="../assets/client-logo.jpg" alt="client">
+                        <img  src="../assets/client-logo.jpg" alt="client">
+                        <img  src="../assets/client-logo.jpg" alt="client">
+                        <img  src="../assets/client-logo.jpg" alt="client">
+                        <img  src="../assets/client-logo.jpg" alt="client">
+                    </div>
+                    <div class="companyrow companyrow2"  style="--moverow:80;">
+                        <img src="../assets/client-logo.jpg" alt="client">
+                        <img src="../assets/client-logo.jpg" alt="client">
+                        <img src="../assets/client-logo.jpg" alt="client">
+                        <img src="../assets/client-logo.jpg" alt="client">
+                        <img src="../assets/client-logo.jpg" alt="client">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center whatwedo">
+                <div class="doleft whatwedoslideleft" id="whatwedoslide">
+                    <img src="../assets/about us.png" alt="" class="aboutImg">
+                    <a href="#" class="whatwedogetcall">Get a Call</a>
+                </div>
+                <div class="doright whatwedoslideright">
+                    <div class="infoo dotop">
+                        <h1>Custom Email Design <img src="../assets/emailimg.png" alt=""></h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, architecto!</p>
+                    </div>
+                    <div class="infoo maps">
+                        <h1><img src="../assets/mapss.png" alt=""> Maps Search Optimization</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, architecto!</p>
+                    
+                    </div>
+                    <div class="infoo linkbuild">
+                        <h1><img src="../assets/linklogo.png" alt=""> Link Building & Content</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, architecto!</p>
+                    </div>
+                </div>
+                <h1 class="whatdotag">WHAT <span>WE DO</span></h1>
+            </div>
+
+
+            <div id="aboutusslide" class="center aboutslide">
+                <div class="aboutleft">
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ullam eos impedit ipsa quis illo nam unde Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corrupti!</p>
+                    <a href="#" class="aboutview">View More</a>
+                </div>
+                <div class="aboutright">
+                   <img src="../assets/character.png" alt="">
+                </div>
+                <h1 id="aboutustagline" class="whatdotag abttagbtm"><span>ABOUT</span> US</h1>
+            </div>
+
+
+
+            <!-- project slide -->
+            <div id="ourprojectsslide" class="center projectsslide">
+                <div class="projectsdone">
+                    <div class="proj">
+                        <div class="description">
+                                <h3>Project</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ducimus!</p>
+                                <a href="#" class="viewproject">View Project</a>
+                        </div>
+                        <img src="../assets/project name.jpg" alt="">
+                    </div>
+                    <div class="proj">
+                        <div class="description">
+                                <h3>Project</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ducimus!</p>
+                                <a href="#" class="viewproject">View Project</a>
+                        </div>
+                        <img src="../assets/project name.jpg" alt="">
+                    </div>
+                    <div class="proj">
+                        <div class="description">
+                                <h3>Project</h3>
+                                
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ducimus!</p>
+                                <a href="#" class="viewproject">View Project</a>
+                        </div>
+                        <img src="../assets/project name.jpg" alt="">
+                    </div>
+                    <div class="proj">
+                        <div class="description">
+                                <h3>Project</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ducimus!</p>
+                                <a href="#" class="viewproject">View Project</a>
+                        </div>
+                        <img src="../assets/project name.jpg" alt="">
+                    </div>
+                </div>
+                <h1 class="whatdotag abttagbtm">PROJECTS</h1>
+            </div>
+
+            <!-- client slide -->
+            
+            <div id="satisfiedclientslide" class="center clientslide">
+                <p class="clientreview">
+                    <span class="commas">‘‘</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vero repellendus fuga temporibus sed et laborum ea odit reprehenderit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quam delectus ea minima sit omnis itaque dolor? Ducimus, officia numquam?
+                </p>
+                <img src="../assets/mountain.png" id="montains" alt="">
+                <div class="clientname">
+                    <h1>David J.</h1>
+                    <small class="clientdesignation">Sr. Marketing Manager</small>
+                    <div class="smiless">
+                        <span style="--motion:45;"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span style="--motion:-45;"></span>
+                    </div>
+                </div>
+                <h1 class="whatdotag happyclient"><span>HAPPY</span> CLIENT</h1>
+            </div>
+
+
+            <!-- Contact slide -->
+            <div id="send_us_a_messageslide" class="center contactslide">
+                <div class="contactleftside">
+                    <div class="contactintro">
+                        <h1>Honcho Metrices</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo consectetur quae velit odio voluptas a eius iusto quibusdam sequi et?</p>
+                    </div>
+                    <div class="contactphone">
+                        <h2>PHONE</h2>
+                        <p>+92 123 1234567</p>
+                    </div>
+                    <div class="contactemail">
+                        <h2>E-MAIL</h2>
+                        <p>info@honchometrices.com</p>
+                    </div>
+                    <div class="contactaddress">
+                        <h2>ADDRESS</h2>
+                        <p>704, Best Sky Tower, Netaji Subhash Palace, New Delhih2</p>
+                    </div>
+                </div>
+                <div class="contactrightside">
+                    <form action="#">
+                        <input type="text" placeholder="Name*">
+                        <input type="text" placeholder="Mobile Number*">
+                        <input type="email" placeholder="Email*">
+                        <textarea name="" id="" placeholder="How can we help you?"></textarea>
+                        <input type="submit" id="submitMessagge" value="Send">
+                    </form>
+            </div>
+                <h1 class="whatdotag sendsms"><span>SEND</span> MESSAGE</h1>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="right">
+            <button id="light"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                    <path
+                        d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z" />
+                </svg></button>
+
+            <div id="dots">
+                <a href="index.html" class="activelink" data-index="01"></a>
+                <a href="#ourallclients_slide" class="" data-index="02"></a>
+                <a href="#whatwedoslide" class="" data-index="03"></a>
+                <a href="#aboutUsslide" class="" data-index="04"></a>
+                <a href="#ourprojectsslide" class="" data-index="05"></a>
+                <a href="#satisfiedclientslide" class="" data-index="06"></a>
+                <a href="#send_us_a_messageslide" class="" data-index="07"></a>
+
+            </div>
+            <button  class="contactbtn" >Contact us</button>
+        </div>
+    </main>
+    <script src="honcho.js"></script>
+    
+
+</body>
+
+</html>
