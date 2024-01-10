@@ -28,11 +28,12 @@ html{
 
 body{
     --fg-color:rgb(15, 14, 14);
-    --orange-accent:rgb(251, 170, 18);
+    --orange-accent:#EBD134;
     --bg-color:rgb(245, 245, 233);
-    --bulb-color:rgb(251, 170, 18);
+    --bulb-color:#EBD134;
     --bulbfilament-color:rgb(21, 21, 21);
-    --yellow-tone:rgb(247, 247, 56);
+    --yellow-tone:#EBD134;
+    --yellow-accent:#EBD134;
     min-height: 100vh;
     height: fit-content;
     width: 100vw;
@@ -59,7 +60,7 @@ body.rootchange{
     --bg-color:rgb(23, 51, 23);
     --fg-color:rgb(245, 245, 233);
     --bulbfilament-color:rgb(42, 41, 41);
-    --yellow-tone:rgb(234, 234, 0);
+    --yellow-tone:#EBD134;
     --bulb-color:linear-gradient(to bottom, rgba(53, 87, 53, 0.61), transparent);
 }
 /* Hero Section */
@@ -151,6 +152,7 @@ text-align: center;
     transform: rotate(90deg) translateX(-20px) !important;
     text-transform: uppercase;
     width: 200px;
+    color: var(--fg-color);
 }
 .contactbtn::before{
     content: '';
@@ -199,9 +201,8 @@ text-align: center;
     background:linear-gradient(135deg, rgba(0,0,0,0.3),rgba(0,0,0,0.3)) ,url("../assets/main-hero-section.jpg");
     background-size: cover;
     background-origin: center;
-    transition: 400ms;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.379);
-    transition: 100ms ease-in;
+    transition: 100ms ease-in-out;
 }
 .bars:last-child{
     border-top-right-radius: 10px;
@@ -237,7 +238,7 @@ text-align: center;
 }
 
 .heading span{
-    color: rgb(255, 255, 56);
+    color: var(--yellow-accent);
 }
 
 .learn{
@@ -249,12 +250,12 @@ text-align: center;
     font-weight: 500;
     transform: translate(-50%,30%);
     background: var(--orange-accent);
-    transition: 400ms;
+    transition: 400ms ease-out;
     width: 8vw;
 }
 
 .learn:hover{
-    background: rgb(240, 157, 3);
+    background: #e2c833;
 }
 
 /* slide 2 css */
@@ -281,7 +282,7 @@ text-align: center;
 .clientCol .ourclientsTxt{
     animation-delay: 1s;
     animation: clientTxt 4s linear;
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
 
 @keyframes clientTxt{
@@ -327,39 +328,31 @@ text-align: center;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    transition: 1s ease-in;
+    transition: 1.4s ease-in-out;
 }
 
 
-/* @keyframes moverows{
-    0%{
-        transform: translateX(calc(1vw*var(--moverow)));
-    }
-    100%{
-        transform: translateX(0);
-    }
-} */
 
 
 .companyblock .companyrow1{
     transform: translateX(-1000px);
-    transition:700ms ease-in-out;
+    transition:800ms ease-in;
 }
 .companyblock .companyrow2{
     transform: translateX(1000px);
-    transition:700ms ease-in-out;
+    transition:800ms ease-in;
 }
 
 
 .companyblock .companyrow:nth-child(1) img:nth-child(2) {
     /* transform: rotate(40deg) translateY(-38px) translateX(-30px); */
     transform: rotate(40deg) translateY(-200px) translateX(-100px);
-    transition: 400ms ease-in-out;
+    transition: 500ms ease-in-out;
     opacity: 0;
 }
 .companyblock .companyrow:nth-child(2) img:nth-child(4) {
     transform: translateY(-215px);
-    transition: 200ms ease-in-out;
+    transition: 500ms ease-in-out;
     opacity: 0;
 }
 
@@ -373,6 +366,7 @@ text-align: center;
     padding: 2vw 2vw;
     box-shadow: 2px 12px 100px rgba(44, 40, 40, 0.58);
     transition: 500ms ease-in-out;
+    object-fit: contain;
 }
 
 
@@ -486,8 +480,8 @@ text-align: center;
     width: 100vw;
     height: 100vh;
     
-    background: rgb(237, 202, 44);
-    position: absolute;
+    background:var(--yellow-tone);
+    position: fixed;
     top: 0;
     left: -120vw;
     z-index: 1;
@@ -512,8 +506,7 @@ text-align: center;
 
 .menuleft #exitmenu{   
     
-    font-size: 3vw;
-    font-weight: 400;
+    height: 2.6vw;
     transform: rotateY(-30deg) translateZ(-20px);
     
 }
@@ -603,9 +596,10 @@ text-align: center;
     width: 100vw;
     height: 100vh;
     
-    background: rgb(133, 114, 72);
-    position: absolute;
+    background: #9E905C;
+    position: fixed;
     top: 0;
+    bottom: 0;
     right:-110vw;
     z-index: 2;
 
@@ -615,7 +609,6 @@ text-align: center;
 
     transition: 1100ms ease-in;
 
-    --yellow-accent:rgb(237, 202, 44);
 }
 
 
@@ -647,14 +640,11 @@ text-align: center;
     fill: aliceblue;
 }
 
-#contactpoup .menuright i{
+#contactpoup .menuright img{
     
     position: absolute;
     top: 2vh;
-    font-weight: 500;
-    font-size: 3vw;
-    font-family: monospace;
-    font-weight: 400;
+    height: 2.6vw;
     
 }
 
@@ -725,7 +715,7 @@ text-align: center;
 }
 
 #contactpoup .menumain .popcontact h2{
-    color: var(--yellow-accent);
+    color: var(--yellow-tone);
     font-weight: 500;
     letter-spacing: 3px;
 }
@@ -810,9 +800,9 @@ text-align: center;
 #contactpoup .menumain .popcontact #contactform .formbase .formleft .skill div small input{
    border: none;
    outline: none;
-   accent-color: rgb(133, 114, 72);
+   accent-color: #877b4f;
    background: transparent;
-   border: 1px solid rgb(133, 114, 72);
+   border: 1px solid  #877b4f;  
 }
 #contactpoup .menumain .popcontact #contactform .formbase .formright{
    display: flex;
@@ -830,7 +820,7 @@ text-align: center;
 }
 #contactpoup .menumain .popcontact #contactform .formbase .formright input::placeholder,
 #contactpoup .menumain .popcontact #contactform .formbase .formright textarea::placeholder{
-   color: rgb(163, 152, 126);
+   color: rgba(240, 248, 255, 0.64);
    font-size: 16px;
    font-weight: 300;
 }
@@ -846,7 +836,7 @@ text-align: center;
   align-self: last baseline;
   transform: translateY(4.3vh);
   
-  transition: 500ms ease-in;
+  transition: 500ms ease-in-out;
 }
 #contactpoup .menumain .popcontact #contactform .formbase .formright .submit:hover{
   
@@ -870,7 +860,7 @@ text-align: center;
     transition: opacity 600ms;
 }
 .whatwedo .doleft img{
-    width: 25vw;
+    width: 35vw;
     object-fit: cover;
     margin: auto;
 }
@@ -888,7 +878,7 @@ text-align: center;
     transition: transform 700ms;
 }
 .whatwedo .doleft a:hover{ 
-    background: rgb(220, 188, 46);
+    background: var(--yellow-accent);
 }
 
 .whatwedo .doright{
@@ -910,13 +900,13 @@ text-align: center;
     color: rgba(12, 12, 12, 0.744);
 }
 .whatwedo .doright .infoo h1 img{
-    height: 30px;
+    height: 25px;
     aspect-ratio: 1/1;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 50%;
     transform: translateY(10px);
-    background: rgb(175, 175, 175);
-    padding: 1px;
+    padding: 8px;
 }
 .whatwedo .doright .infoo p{
     font-size: 12px;
@@ -927,6 +917,12 @@ text-align: center;
 
 .whatwedo .doright .dotop{
     transform: translateX(-50px) translateY(-70px);
+}
+.whatwedo .doright .dotop img{
+    height: 2.2vw !important;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    padding: 0;
 }
 
 .whatwedo .doright .dotop h1::before{
@@ -948,10 +944,10 @@ text-align: center;
     position: absolute;
     top: 0;
     right: 0;
-    height: 320px;
+    height: 330px;
     width: 2px;
     background: rgba(12, 12, 12, 0.748);
-    transform: rotate(-30deg) translateX(-350px) translateY(-60px) ;
+    transform: rotate(-30deg) translateX(-356px) translateY(-55px) ;
 }
 
 .whatwedo .doright .maps h1 img{
@@ -975,7 +971,7 @@ text-align: center;
     height: 150px;
     width: 2px;
     background: rgba(12, 12, 12, 0.748);
-    transform: rotate(45deg) translateX(-335px) translateY(145px) ;
+    transform: rotate(43.5deg) translateX(-350px) translateY(135px) ;
     z-index: -1;
 }
 .whatwedo .doright .linkbuild::after{
@@ -1068,7 +1064,7 @@ text-align: center;
     transition: transform 1.4s;
 }
 .aboutslide .aboutleft a:hover{
-    background: rgb(215, 215, 30);
+    background: var(--bulb-color);
 }
 
 
@@ -1083,8 +1079,8 @@ text-align: center;
 }
 .aboutslide .aboutright img{
     width: 20vw;
-    height: 70vh;
-    object-fit: cover;
+    height: 50vh;
+    object-fit: contain;
 }
 
 
@@ -1230,7 +1226,7 @@ text-align: center;
     height: 14px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background: rgb(241, 241, 3);
+    background: var(--yellow-accent);
     position: absolute;
     top: 8px;
     left: -20px;
@@ -1244,13 +1240,13 @@ text-align: center;
     display: flex;
 }
 #montains{
-    height: 44vh;
+    height: 50vh;
     aspect-ratio: 1/1;
     object-fit: contain;
-    opacity: 0.1;
+    opacity: 1;
     position: absolute;
-    left: 10%;
-    top: 40%;    
+    left: 8%;
+    top: 30%;    
 }
 
 .commas{
@@ -1356,7 +1352,7 @@ text-align: center;
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 5vh 6vw;
-    background: rgb(255, 204, 0);
+    background: var(--yellow-tone);
     border-top-right-radius: 3%;
     border-bottom-right-radius: 3%;
     transform: translateX(0px);

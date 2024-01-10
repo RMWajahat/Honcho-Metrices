@@ -26,11 +26,12 @@ html{
 
 body{
     --fg-color:rgb(15, 14, 14);
-    --orange-accent:rgb(251, 170, 18);
+    --orange-accent:#EBD134;
     --bg-color:rgb(245, 245, 233);
-    --bulb-color:rgb(251, 170, 18);
+    --bulb-color:#EBD134;
     --bulbfilament-color:rgb(21, 21, 21);
-    --yellow-tone:rgb(255, 245, 105);
+    --yellow-tone:#EBD134;
+    --yellow-accent:#EBD134;
     min-height: 100vh;
     height: fit-content;
     width: 100vw;
@@ -98,7 +99,7 @@ body.rootchange{
 }
 
 .navbar button:nth-child(1){
-    color: rgb(133, 114, 72);
+    color: #9E905C;
 }
 .navbar button:nth-child(2){
    transform: translateY(-30px);
@@ -232,6 +233,7 @@ body.rootchange{
    background: aliceblue;
    padding: 10px;
    transform: translateX(10px);
+   object-fit: contain;
 }
 
 .slide{
@@ -297,7 +299,7 @@ body.rootchange{
 }
 .whatwedobar .wedoall ul li small{
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 5px;
     color: rgba(27, 27, 27, 0.594);
 }
@@ -312,12 +314,16 @@ body.rootchange{
     background:rgba(27, 27, 27, 0.594) ;
     position: absolute;
     left: -14%;
-    top: 15.6%;
+    top: 9%;
 }
 .whatwedobar .wedoall ul li:nth-child(2):before{
     transform: rotate(-35deg);
-    left: -13%;
-    top: 20%;
+    left: -13.6%;
+    top: 14%;
+}
+.whatwedobar .wedoall ul li:nth-child(1):before{
+
+    top: 15%;
 }
 
 .wedoall .getcallwedo{
@@ -367,7 +373,7 @@ body.rootchange{
 
 }
 .about a{
-    background: rgb(250, 216, 22);
+    background: var(--yellow-accent);
     padding: 10px 30px;
     color: rgba(27, 27, 27, 0.794);
     font-weight: 500;
@@ -436,7 +442,7 @@ body.rootchange{
 }
 .projects .project a{
     
-    color:rgb(133, 114, 72);
+    color:#9E905C;
     font-size: 3.4vw;
     font-weight: 600;
 
@@ -551,12 +557,12 @@ body.rootchange{
     transform: translateY(42px) translateX(20px) rotate(-45deg);
     transform-origin: top;
     font-size: 9vw;
-    color: rgb(133, 114, 72);
+    color: #9E905C;
     
 }
 .happyclientbar .clientreview .clientname span:nth-child(3) .bx:last-child:after{
      top: -180%;
-    height: 63px;background: rgb(133, 114, 72);
+    height: 63px;background: #9E905C;
 }
 
 
@@ -577,7 +583,7 @@ body.rootchange{
     width: 92vw;
     height: 80svh;
     margin: auto;
-    background:#f2f272;
+    background:var(--yellow-accent);
     border-top-right-radius: 35%;
     border-top-left-radius: 35%;
     display: flex;
@@ -648,7 +654,7 @@ body.rootchange{
     background:transparent ;
     border: none;
     outline: none;
-    border-bottom: 2px solid rgb(151, 129, 84, 0.716);
+    border-bottom: 2px solid #9E905C;
 }
 .contactbar textarea{
     height: 20vh;
@@ -658,7 +664,7 @@ body.rootchange{
 .contactbar input[type="submit"]{
     width: 26vw;
     height: 10vw;
-    background: rgb(151, 129, 84);
+    background: #9E905C;
     color: aliceblue;
     font-weight: 500;
 }
@@ -670,7 +676,7 @@ body.rootchange{
 /* menu pop up  */
 
 .menupopup{
-    background: #f2f272;
+    background: var(--bulb-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -691,9 +697,11 @@ body.rootchange{
 
 .crossmenu{
     width: 100%;
-    text-align: right;
+    display: flex;
+    transform: translateX(40%);
     padding: 10px;
-    font-size: 10vw;
+    height: 13vw;
+    object-fit: contain;
 }
 
 .popupsocials{
@@ -751,14 +759,14 @@ body.rootchange{
     top: 70%;
 }
 .menupopup h1 .whiteaccent{
-    color: rgb(213, 213, 213);
+    color: rgb(255, 255, 255);
 }
 
 
 
 
 .contactpopup{
-    background: rgb(151, 129, 84);
+    background: #9E905C;
     position: fixed;
     top: 0;
     left: 0;
@@ -779,8 +787,10 @@ body.rootchange{
 .contactpopup .crosscontact{
     width: fit-content;
     text-align: center;
-    padding: 5px;
-    font-size: 10vw;
+    padding-top: 15px;
+    padding-right: 15px;
+    object-fit: contain;
+    height: 10vw;
     color: aliceblue;
     align-self: flex-end;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.514); */
@@ -801,7 +811,7 @@ body.rootchange{
 }
 
 .popupsocials .menubtn{
-    color: #f2f262;
+    color: var(--yellow-accent);
 }
 
 .contactpopup .popupsocials{
@@ -820,7 +830,7 @@ body.rootchange{
 }
 
 .formwithdetails h2{
-    color:#dede00;
+    color:var(--yellow-accent);
     font-weight: 400;
     font-size: 5vw;
 }
@@ -871,15 +881,15 @@ form .buttonchoices::after{
 form .buttonchoices input{
     outline: none;
     border: none;
-    background: rgb(138, 118, 77);
+    background: #9E905C;
     height: 5vh;
     border-radius: 4px;
-    color: rgba(240, 248, 255, 0.64);
+    color: white;
     font-weight: 400;
 }
 form .buttonchoices input:active{
     
-    background: rgb(144, 123, 81);
+    background: #7d724a;
     
 }
 
@@ -901,7 +911,7 @@ form .buttonchoices input:active{
 }
 .forminputs input::placeholder,.forminputs textarea::placeholder{
    
-    color: rgba(240, 248, 255, 0.284);
+    color: rgba(240, 248, 255, 0.638);
 }
 
 .forminputs textarea{
@@ -914,15 +924,16 @@ form .buttonchoices input:active{
     
     width: 50vw;
     margin: auto;
-    border: 2px solid #dede00;
+    border: 2px solid var(--bulb-color);
     height: 6vh;
     font-weight: 600;
     letter-spacing: 2px;
     color: antiquewhite;
     z-index: 10;
+    transition: 100ms ease-out;
     
 }
 .forminputs input[type="submit"]:hover{
-    background: #dede004d;
+    background: var(--yellow-accent);
     
 }
