@@ -146,11 +146,12 @@ Animateblock.addEventListener("scroll",()=>{
         
             document.querySelector("#dots a:nth-child(1)").classList.add("activelink");
 
-                bars[0].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 1.4)) + "px)";
-                bars[1].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 1.2)) + "px)";
-                bars[2].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 1.6)) + "px)";
-                bars[3].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 2.1)) + "px)";
-                bars[4].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 1.86)) + "px)";
+                bars[0].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 2.3)) + "px)";
+                bars[1].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 2)) + "px)";
+                bars[2].style.transform = "translateY( -" + (((Animateblock.scrollTop))) + "px)";
+                bars[2].style.zIndex = "8";
+                bars[3].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 2)) + "px)";
+                bars[4].style.transform = "translateY( -" + (((Animateblock.scrollTop) * 2.3)) + "px)";
     }
 
 
